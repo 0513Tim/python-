@@ -1,0 +1,102 @@
+# d483
+# print("hello, world")
+
+# a001
+# a = input()
+# print("hello, ",end="")
+# print(a)
+# a = input()
+# print("hello, ",end=a)
+# a = input()
+# print("hello,",a)
+"""
+a = input()
+print("hello, "+a)
+"""
+#print(f"hello, {input()}")
+'''
+
+a065
+# a = input()
+# s1 = abs(ord(a[0])-ord(a[1]))
+# s2 = abs(ord(a[1])-ord(a[2]))
+# s3 = abs(ord(a[2])-ord(a[3]))
+# s4 = abs(ord(a[3])-ord(a[4]))
+# s5 = abs(ord(a[4])-ord(a[5]))
+# s6 = abs(ord(a[5])-ord(a[6]))
+# print(str(s1)+str(s2)+str(s3)+str(s4)+str(s5)+str(s6))
+
+# a799
+# print(abs(int(input())))
+# a = input()
+# a = int(a)
+# a = abs(a)
+# print(a)
+
+# e343
+# w = int(input())
+# h = float(input())
+# print(f"{w/h**2:.1f}")
+
+# w = int(input())
+# h = float(input())
+# print(f"BMI = {w/h**2:.1f} (kg/m*m) ")
+
+# d064
+# a = int(input())
+# if  a%2 !=0:#0 1
+#     print("Odd")
+# else :
+#     print("Even")
+
+#c294
+# a,b,c = input().split()
+# a,b,c =int(a),int(b),int(c)
+# if a>b>c:
+#     temp=c
+#     c=a
+#     a=temp
+# elif b>a>c:
+#     temp=c
+#     c=b
+#     b=a
+#     a=temp
+# elif c>a>b:
+#     temp=b
+#     b=a
+#     a=temp
+# elif a>c>b:
+#     temp=a
+#     a=b
+#     b=c
+#     c=temp
+# elif b>c>a:
+#     temp=b
+#     b=c
+#     c=temp
+# print(a,b,c)
+
+# if  (a+b)<=c:
+#     print("No")
+# elif a**2+b**2<c**2:
+#     print("Obtuse")
+# elif    a**2+b**2==c**2:
+#     print("Right")
+# else :
+#     print("Acute")
+
+
+# #b.516
+# a = int(input())
+# for i in range(a):
+#     s = input().strip()
+#     c = ""
+#     for j in range(len(s)):
+#         b = ord(s[j]) + 3 - ord('A') 
+#         b %=26  # 超過 Z 的要回到 A
+#         b += ord("A") 
+#         b =chr(b) # ASCII->char
+#         c+=b
+#         print(chr((( ord(s[j]) +3 ) -65 ) %26 + 65) ,end="")
+#     print()    
+#     print(c)
