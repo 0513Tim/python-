@@ -1,0 +1,102 @@
+#a038. 數字翻轉
+a=input()
+a=list(a)
+# print(len(a))
+b = []
+# print(a)
+for i in range(len(a)-1,-1,-1):
+    if a[len(a)-1]=='0':
+       a.pop()
+       continue
+    b.append(a[i])
+
+if a[0]==0:
+    a.pop(0)
+
+b = "".join(b)
+print(b)
+
+#另解
+# a = input()
+# a = list(a)
+# a.reverse()
+# a = "".join(a)
+# print(int(a))
+
+#reversed(a)
+
+#a104. 排序
+while True:
+    try:
+#你的程式碼
+        n = int(input())
+        num = input().split()
+        for i in range(n):
+            num[i] = int(num[i])
+        num.sort()
+        for i in range(n):
+            print(num[i],end=" ")
+        print()
+
+    except EOFError:
+        break
+
+#a541. 字典
+
+n = int(input())
+dic = {}
+for i in range(n):
+    word = input().strip()
+    dic[word]="yes"
+q = int(input())
+for j in range(q):
+    word2 = input().strip()
+    if word2 in dic.keys():
+        print(dic[word2])
+    else :
+        print('no')
+        dic[word2]="yes"
+
+#a020. 身分證檢驗
+a = input()
+dic = {"A":10 ,     "J":18 ,     "S":26 ,
+      "B":11 ,     "K":19 ,     "T":27 ,
+      "C":12 ,     "L":20 ,     "U":28 ,
+      "D":13 ,     "M":21 ,     "V":29 ,
+      "E":14 ,     "N":22 ,     "W":32 ,
+      "F":15 ,     "O":35 ,     "X":30 ,
+      "G":16 ,     "P":23 ,     "Y":31 ,
+      "H":17 ,     "Q":24 ,     "Z":33 ,
+      "I":34 ,     "R":25 ,
+}# print(dic.items())
+
+num = dic[a[0]]%10*9 + dic[a[0]]//10 
+for i in range(8,0,-1):
+    num += int(a[9-i])*i
+num += int(a[-1])
+if num %10 ==0:
+    print("real")
+else :
+    print("fake")
+
+#a024. 最大公因數(GCD)
+def GCD(n,m):
+    if m == 0:
+        return n
+    else :
+        return GCD(m,n%m)
+    
+n,m = input().split()
+n,m = int(n),int(m)
+print(GCD(n,m))
+
+#e156. 良心題: 求和
+import sys
+sys.setrecursionlimit(1100)
+
+def sum(n):
+    return n and n + sum(n - 1)
+
+n = int(input())
+result = sum(n)
+print(result) 
